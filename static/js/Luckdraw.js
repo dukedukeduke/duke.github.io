@@ -121,7 +121,7 @@ function startNum() {
 	num = Math.floor(Math.random() * pcount);
 	nametxt.css('background-image','url('+xinm_new[num]+')');
 	phonetxt.html(phone_new[num]);
-	t = setTimeout(startNum, 0.5);
+	t = setTimeout(startNum, 100);
 }
 
 // 停止跳动
