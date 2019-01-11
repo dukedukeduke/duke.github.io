@@ -188,8 +188,14 @@ function zd() {
 					console.log("即将删除：");
 					console.log(xinm_new[num]);
 					console.log(phone_new[num]);
+					console.log("删除前：");
+					console.log(xinm_new);
+					console.log(phone_new);
 					xinm_new.splice($.inArray(xinm_new[num], xinm_new), 1);
 					phone_new.splice($.inArray(phone_new[num], phone_new), 1);
+					console.log("删除后：");
+					console.log(xinm_new);
+					console.log(phone_new);
 
 				}
 			},1000);
