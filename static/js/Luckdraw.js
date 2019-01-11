@@ -192,8 +192,8 @@ function zd() {
 					console.log("删除前：");
 					console.log(xinm_new);
 					console.log(phone_new);
-					xinm_new.splice($.inArray(xinm_new[num], xinm_new), 1);
-					phone_new.splice($.inArray(phone_new[num], phone_new), 1);
+					xinm_new.splice(num, 1);
+					phone_new.splice(num, 1);
 					console.log("删除后：");
 					console.log(xinm_new);
 					console.log(phone_new);
