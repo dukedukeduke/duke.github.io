@@ -51,7 +51,7 @@ function start(val) {
 	}
 	if(lottery_level==1)
 	{
-	    if(Number(val) > max_winners - count_first_winner_selected)
+	    if(Number(val) > max_winners)
         {
             alert("输入错误，剩余名额：" + (max_winners - count_first_winner_selected).toString());
             return false
@@ -59,7 +59,7 @@ function start(val) {
 	}
 	if(lottery_level==2)
 	{
-	    if(Number(val) > max_winners - count_second_winner_selected)
+	    if(Number(val) > max_winners)
         {
             alert("输入错误，剩余名额：" + (max_winners - count_second_winner_selected).toString());
             return false
@@ -75,7 +75,7 @@ function start(val) {
 	}
 	if(lottery_level==0)
 	{
-	    if(Number(val) > max_winners - count_lucky_winner_selected)
+	    if(Number(val) > max_winners)
         {
             alert("输入错误，剩余名额：" + (max_winners - count_lucky_winner_selected).toString());
             return false
