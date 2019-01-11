@@ -4,7 +4,7 @@ html,body{padding: 0; margin: 0; font-family: 14px; font-family: "微软雅黑";
 
 .ce-pack-end{display: -webkit-box; -webkit-box-orient: vertical; -webkit-box-pack:center; position: absolute; top:0; left: 0;}
 
-.luck-back{background-image: url(../img/back2.jpg); background-size: cover; background-position: top center; position: absolute; height: 100%; width: 100%; color: #fff;}
+.luck-back{background-image: url(../img/back1.jpg); background-size: cover; background-position: top center; position: absolute; height: 100%; width: 100%; color: #fff;}
 
 .luck-content{position: absolute; top: 20%; bottom:20%; left:20%; right:20%; background: rgba(0,0,0,.6); padding: 20px; border-radius: 5px; padding-right:260px;}
 .lucky_list_show{position: absolute; top: 20%;right:5%; padding: 20px; border-radius: 5px;}
@@ -31,6 +31,44 @@ html,body{padding: 0; margin: 0; font-family: 14px; font-family: "微软雅黑";
 
 .luck-title{font-size: 20px;}
 
+.levellottery{
+    width:150px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    text-align-last: center;
+    /*background: linear-gradient(to right, red, orange, red);*/
+    background: #f5ad18;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 1px #DDDDDD;
+    margin: 30px auto;
+    border:white 1px solid;
+    position: relative;
+    color:red;
+    font-size: 18px;
+}
+.levellottery{
+    /* Chrome */
+    -webkit-appearance: none;
+    /* Firefox */
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: ' '; /* space */
+}
+.levellottery:focus{
+    border: 2px #ddd solid;
+    /*box-shadow: 0 0 15px 1px #DDDDDD;*/
+}
+option{
+    color: black;
+    background: #A6E1EC;
+    line-height: 20px;
+    text-align: center;
+}
+
+option:hover{
+    background: rgba(204,106,67,0.3);
+}
 .slotMachine{ width:200px; height: 200px; display: block; text-align: center; background-color: #ffffff; border-radius: 5px; margin: 0 auto; border:#f5ad18 4px solid; position: relative;}
 .slotMachine .slot{ width:100%; height:100%; background-size: cover; background-position: center; position: absolute;}
 .slotMachine .slot>span{position: absolute; bottom: 0; left: 0; line-height: 50px; text-decoration: center; background-color: rgba(0,0,0,.5); width: 100%;}

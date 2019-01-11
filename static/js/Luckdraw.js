@@ -49,17 +49,17 @@ function start(val) {
 		alert("输入错误");
 		return false
 	}
-    for (i=0;i<winners.length;i++){
-        temp = phone_new.indexOf(winners[i]);
-        if (temp > -1)
-        {
-            phone_new.remove(winners[i]);
-            xinm_new.remove(xinm_new[temp])
-        }
-    }
-    pcount = xinm_new.length-1;//参加人数
-    Lotterynumber = val
-    Count = val
+	for (i=0;i<winners.length;i++){
+			temp = phone_new.indexOf(winners[i]);
+			if (temp > -1)
+			{
+					phone_new.remove(winners[i]);
+					xinm_new.remove(xinm_new[temp])
+			}
+	}
+	pcount = xinm_new.length-1;//参加人数
+	Lotterynumber = val;
+	Count = val;
 	if (runing) {
 		if ( pcount <= Lotterynumber ) {
 			alert("抽奖人数不足");
@@ -71,6 +71,7 @@ function start(val) {
 	} else {
 		$('#start').text('自动抽取中('+ Lotterynumber+')');
 		zd();
+
 	}
 }
 
@@ -113,6 +114,7 @@ function zd() {
 					$('#btntxt').removeClass('start').addClass('stop');
 					startNum();
 				} else {
+					$("#start").removeAttr("onclick");
 					runing = true;
 					$('#btntxt').removeClass('stop').addClass('start');
 					stop();
@@ -128,12 +130,13 @@ function zd() {
 						$('#start').text("开始");
 						Lotterynumber = Count;
 						trigger = true;
+						$("#start").attr("onclick",'start($("#count_set").val())');
 					};
 
 					$('.luck-user-list').prepend("<li><div class='portrait' style='background-image:url("+xinm_new[num]+")'></div><div class='luckuserName'>"+phone_new[num]+"</div></li>");
-                    // if (i == last){
-                    //     $('.luck-user-list').prepend("<li>__________________________</li>"); //----------------------------------
-                    // }
+					if ( i == Count ){
+						$('.luck-user-list').prepend("<li><div></div><div>"+lotterylevel+"</div></li>");
+					}
 					//将已中奖者从数组中"删除",防止二次中奖
 					xinm_new.splice($.inArray(xinm_new[num], xinm_new), 1);
 					phone_new.splice($.inArray(phone_new[num], phone_new), 1);

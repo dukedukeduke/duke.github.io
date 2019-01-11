@@ -33,6 +33,12 @@
             </div>
         </div>
         <div class="luck-content ce-pack-end">
+            <select name="levelselect" id="levelselect" class="levellottery">
+                <option class="levellotteryoption">一等奖</option>
+                <option class="levellotteryoption">幸运奖</option>
+                <option class="levellotteryoption">二等奖</option>
+                <option selected class="levellotteryoption">三等奖</option>
+            </select>
             <div id="luckuser" class="slotMachine">
                 <div class="slot">
                     <span class="name">姓名</span>
@@ -59,6 +65,10 @@
         var xinm = new Array();
         var phone = new Array();
         var winners = new Array();
+        var lotterylevel = $("#levelselect").val();
+        $("#levelselect").change(function(){
+        	lotterylevel=$("#levelselect").val();
+        });
         $.getJSON("static/employee.json",function(data){
             var nametxt = $('.slot');
             var phonetxt = $('.name');
@@ -121,6 +131,5 @@
         };
     </script>
     <script src="./static/js/Luckdraw.js" type="text/javascript"></script>
-
 </body>
 </html>
