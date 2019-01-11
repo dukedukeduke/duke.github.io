@@ -164,6 +164,7 @@ function zd() {
 						Lotterynumber = Count;
 						trigger = true;
 						$("#start").attr("onclick",'start($("#count_set").val())');
+						max_winners = max_winners - Number(Count);
 
 						if (lottery_level==0){
 						    count_lucky_winner_selected = count_lucky_winner_selected + Number(Count);
