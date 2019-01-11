@@ -67,7 +67,7 @@ function start(val) {
 	}
 	if(lottery_level==3)
 	{
-	    if(Number(val) > max_winners - count_third_winner_selected)
+	    if(Number(val) > max_winners)
         {
             alert("输入错误，剩余名额：" + (max_winners - count_third_winner_selected).toString());
             return false
