@@ -185,6 +185,7 @@ function zd() {
 						$('.luck-user-list').prepend("<li><div></div><div>"+lotterylevel+"</div></li>");
 					}
 					//将已中奖者从数组中"删除",防止二次中奖
+					console.log(num);
 					console.log("即将删除：");
 					console.log(xinm_new[num]);
 					console.log(phone_new[num]);
