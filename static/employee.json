@@ -1,50 +1,250 @@
 [
   {
-    "name": "duke",
-    "icon": "./static/img/employee_ico/1.jpg"
+    "name": "Zhou Zhanglin",
+    "icon": "./static/img/employee_ico/zzhanglin.jpg"
   },
   {
-  "name": "lilei",
-  "icon": "./static/img/employee_ico/2.jpg"
+  "name": "Li Dong",
+  "icon": "./static/img/employee_ico/boy.jpg"
   },
   {
-  "name": "hanmm",
-  "icon": "./static/img/employee_ico/3.jpg"
+  "name": "Heidi Zeng Jing",
+  "icon": "./static/img/employee_ico/girl.jpg"
   },
   {
-    "name": "duke1",
-    "icon": "./static/img/employee_ico/4.jpg"
+    "name": "Leo Ni Chengxin",
+    "icon": "./static/img/employee_ico/boy.jpg"
   },
   {
-    "name": "lilei1",
-    "icon": "./static/img/employee_ico/5.jpg"
+    "name": "Bell Lin Dongmei",
+    "icon": "./static/img/employee_ico/girl.jpg"
   },
   {
-    "name": "hanmm1",
+    "name": "Cherry Pan Chunyan",
+    "icon": "./static/img/employee_ico/girl.jpg"
+  },
+  {
+    "name": "Zhang Jingyi",
+    "icon": "./static/img/employee_ico/girl.jpg"
+  },
+  {
+    "name": "Sue Wu Shuyao",
+    "icon": "./static/img/employee_ico/wushuyao.jpg"
+  },
+  {
+    "name": "Yang Gang",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Seven Song Wenqi",
+    "icon": "./static/img/employee_ico/songwenqi.jpg"
+  },
+  {
+    "name": "Ben Zhang Peng",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Chen Dandan",
+    "icon": "./static/img/employee_ico/chendandan.jpg"
+  },
+  {
+    "name": "Hou Huang",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Feng Linzhi",
+    "icon": "./static/img/employee_ico/fenglingzhi.jpg"
+  },
+  {
+    "name": "Kiko Zou Wen",
+    "icon": "./static/img/employee_ico/girl.jpg"
+  },
+  {
+    "name": "Luo Xiaopeng",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Cecilia Huang Rui",
+    "icon": "./static/img/employee_ico/huangrui.jpg"
+  },
+  {
+    "name": "Huang Wen",
+    "icon": "./static/img/employee_ico/huangwen.jpg"
+  },
+  {
+    "name": "Kimmy Wang Maoyao",
+    "icon": "./static/img/employee_ico/wangmaoyao.jpg"
+  },
+  {
+    "name": "Fiona Hu Wanyi",
+    "icon": "./static/img/employee_ico/girl.jpg"
+  },
+  {
+    "name": "Xu Zepei",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Lina Chen Fang",
+    "icon": "./static/img/employee_ico/girl.jpg"
+  },
+  {
+    "name": "Tang Jinlong",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Freecy Fu Lixin",
+    "icon": "./static/img/employee_ico/fulixin.jpg"
+  },
+  {
+    "name": "Wendy Huang Wenjia",
+    "icon": "./static/img/employee_ico/huangwenjia.jpg"
+  },
+  {
+    "name": "Nick Liyuan",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Scarlett Luo Sijia",
+    "icon": "./static/img/employee_ico/girl.jpg"
+  },
+  {
+    "name": "Luo Pan",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Stella Lei Lingling",
+    "icon": "./static/img/employee_ico/girl.jpg"
+  },
+  {
+    "name": "Liu Mengyuan",
+    "icon": "./static/img/employee_ico/liumengyuan.jpg"
+  },
+  {
+    "name": "Wang Dong",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Bill Li Xun",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Amber Liu Jingwen",
+    "icon": "./static/img/employee_ico/liujingwen.jpg"
+  },
+  {
+    "name": "Gou Zhun",
+    "icon": "./static/img/employee_ico/gouzhun.jpg"
+  },
+  {
+    "name": "Ma Ning",
+    "icon": "./static/img/employee_ico/maning.jpg"
+  },
+  {
+    "name": "Runner Mao Yudong",
+    "icon": "./static/img/employee_ico/maoyudong.jpg"
+  },
+  {
+    "name": "Luo Weijun",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Wang Zhuorui",
+    "icon": "./static/img/employee_ico/wangzhuorui.jpg"
+  },
+  {
+    "name": "Colin Chen Ke",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Tang Wei",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Justyna Liu Luying",
+    "icon": "./static/img/employee_ico/liuluying.jpg"
+  },
+  {
+    "name": "Song Zhenzhong",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Tiairi Wang Ting",
+    "icon": "./static/img/employee_ico/girl.jpg"
+  },
+  {
+    "name": "Yi Man",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Duke Yang Chun",
     "icon": "./static/img/employee_ico/6.jpg"
   },
   {
-    "name": "duke2",
-    "icon": "./static/img/employee_ico/1.jpg"
+    "name": "Reico Wang Chuyue",
+    "icon": "./static/img/employee_ico/wangchuyue.jpg"
   },
   {
-    "name": "lilei2",
-    "icon": "./static/img/employee_ico/2.jpg"
+    "name": "Ivan He Xiaolong",
+    "icon": "./static/img/employee_ico/hexiaolong.jpg"
   },
   {
-    "name": "hanmm2",
-    "icon": "./static/img/employee_ico/3.jpg"
+    "name": "Alex Niu Kexin",
+    "icon": "./static/img/employee_ico/girl.jpg"
   },
   {
-    "name": "duke3",
-    "icon": "./static/img/employee_ico/4.jpg"
+    "name": "Wang Xiulei",
+    "icon": "./static/img/employee_ico/girl.jpg"
   },
   {
-    "name": "lilei3",
-    "icon": "./static/img/employee_ico/5.jpg"
+    "name": "Rhine Wu Yutong",
+    "icon": "./static/img/employee_ico/girl.jpg"
   },
   {
-    "name": "hanmm3",
-    "icon": "./static/img/employee_ico/6.jpg"
+    "name": "Demo Wang Yuqiao",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "More Cao Wenjie",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Rin Zhu Ruoyu",
+    "icon": "./static/img/employee_ico/girl.jpg"
+  },
+  {
+    "name": "Zoe Zeng Tiantian",
+    "icon": "./static/img/employee_ico/girl.jpg"
+  },
+  {
+    "name": "Silas Zhu Xiling",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Cheng Lijuan",
+    "icon": "./static/img/employee_ico/girl.jpg"
+  },
+  {
+    "name": "Laura Luo Na",
+    "icon": "./static/img/employee_ico/luona.jpg"
+  },
+  {
+    "name": "Xu Shengchao",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Indie Zhang Yingchi",
+    "icon": "./static/img/employee_ico/girl.jpg"
+  },
+  {
+    "name": "Lori Yan Lingyuan",
+    "icon": "./static/img/employee_ico/yanlingyuan.jpg"
+  },
+  {
+    "name": "Vivian Xu Lai",
+    "icon": "./static/img/employee_ico/boy.jpg"
+  },
+  {
+    "name": "Zhang Dexun",
+    "icon": "./static/img/employee_ico/zhangdexun.jpg"
   }
 ]
