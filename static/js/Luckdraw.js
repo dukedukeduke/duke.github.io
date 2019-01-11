@@ -53,7 +53,7 @@ function start(val) {
 	{
 	    if(Number(val) > max_winners)
         {
-            alert("输入错误，剩余名额：" + (max_winners - count_first_winner_selected).toString());
+            alert("输入错误，剩余名额：" + (max_winners).toString());
             return false
         }
 	}
@@ -61,7 +61,7 @@ function start(val) {
 	{
 	    if(Number(val) > max_winners)
         {
-            alert("输入错误，剩余名额：" + (max_winners - count_second_winner_selected).toString());
+            alert("输入错误，剩余名额：" + (max_winners).toString());
             return false
         }
 	}
@@ -69,7 +69,7 @@ function start(val) {
 	{
 	    if(Number(val) > max_winners)
         {
-            alert("输入错误，剩余名额：" + (max_winners - count_third_winner_selected).toString());
+            alert("输入错误，剩余名额：" + (max_winners).toString());
             return false
         }
 	}
@@ -77,7 +77,7 @@ function start(val) {
 	{
 	    if(Number(val) > max_winners)
         {
-            alert("输入错误，剩余名额：" + (max_winners - count_lucky_winner_selected).toString());
+            alert("输入错误，剩余名额：" + (max_winners).toString());
             return false
         }
 	}
@@ -164,6 +164,7 @@ function zd() {
 						Lotterynumber = Count;
 						trigger = true;
 						$("#start").attr("onclick",'start($("#count_set").val())');
+						max_winners = max_winners - Number(Count);
 
 						if (lottery_level==0){
 						    count_lucky_winner_selected = count_lucky_winner_selected + Number(Count);
