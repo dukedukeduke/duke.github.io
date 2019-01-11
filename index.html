@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Lottery</title>
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/barrager.css">
+
+    <script src="./static/js/jquery-2.2.1.min.js"></script>
+    <script src="./static/js/bootstrap.js"></script>
+    <script src="./static/js/header.js"></script>
+    <script src="./static/js/jquery.barrager.js"></script>
+</head>
+<body>
+    <div class='luck-back'>
+        <span id="conn_status"></span>
+        <div class="lucky_list_show">
+            <input type="file" name="winner_upload" id="winner_upload" style="width:150px;" onchange='openFile(event)'>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse1"><span class="glyphicon glyphicon-plus"></span>Winners</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <div class="panel-body" id="winners">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="luck-content ce-pack-end">
+            <select name="levelselect" id="levelselect" class="levellottery">
+                <option class="levellotteryoption">一等奖</option>
+                <option class="levellotteryoption">幸运奖</option>
+                <option class="levellotteryoption">二等奖</option>
+                <option selected class="levellotteryoption">三等奖</option>
+            </select>
+            <div id="luckuser" class="slotMachine">
+                <div class="slot">
+                    <span class="name">姓名</span>
+                </div>
+            </div>
+            <div class="luck-content-btn">
+                <a id="start" class="start" onclick='start($("#count_set").val())'>开始</a>
+                <span id="count_set_span"><input id="count_set" ></span>
+            </div>
+            <div class="luck-user">
+                <div class="luck-user-title">
+                    <span>中奖名单</span>
+                </div>
+                <ul class="luck-user-list" id="lucky_list"></ul>
+                <div class="luck-user-btn">
+                    <a onclick="saveFile()" id="save_lottery">中奖人</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var xinm = new Array();
+        var phone = new Array();
+        var winners = new Array();
+        var lotterylevel = $("#levelselect").val();
+        $("#levelselect").change(function(){
+        	lotterylevel=$("#levelselect").val();
+        });
+        $.getJSON("static/employee.json",function(data){
+            var nametxt = $('.slot');
+            var phonetxt = $('.name');
+            $.each(data,function(infoIndex,info){
+                phone[infoIndex] = info["name"];
+                xinm[infoIndex] = info["icon"];
+            });
+            nametxt.css('background-image','url('+xinm_new[0]+')');
+            phonetxt.html(phone_new[0]);
+        });
+
+        var openFile = function(event) {
+            var files = $('input[name="winner_upload"]').prop('files');
+            if (files.length === 0) {
+                return;
+            } else {
+                var reader = new FileReader();
+                reader.readAsText(files[0], "UTF-8");
+                reader.onload = function (evt) {
+                    const fileString = evt.target.result;
+                    var winner;
+                    try{
+                        winner = JSON.parse(fileString);
+                    }catch(e){
+                    	alert("文件格式错误");
+                        return;
+                    }
+                    if (winner && isArray(winner)){
+                        $("#winners p").each(function(){
+                            $(this).remove();
+                        });
+                    	console.log(winner);
+                        console.log(winner.length);
+                        for (let i=0; i<winner.length; i++)
+                        {
+                            console.log(winner[i]);
+                            var winner_item=$("<p>"+winner[i]+"</p>");
+                            winner_item.appendTo($("#winners"));
+                            winners.push(winner[i]);
+                        }
+                    }
+                    else{
+                    	alert("文件内容错误");
+                    	return;
+                    }
+                }
+            }
+        };
+        function isArray(o){
+            return Object.prototype.toString.call(o)==='[object Array]';
+        }
+        var saveFile = function(event) {
+            members = new Array();
+            $("#lucky_list li").each(function(){
+                members.push($(this).children().first().next().html());
+                });
+            let myJson = JSON.stringify(members);
+            $("#save_lottery").attr("href",'data:application/json;charset=utf-8;json,' + myJson);
+            $("#save_lottery").attr("download","data.json");
+        };
+    </script>
+    <script src="./static/js/Luckdraw.js" type="text/javascript"></script>
+</body>
+</html>
