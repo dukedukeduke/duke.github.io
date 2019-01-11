@@ -49,6 +49,39 @@ function start(val) {
 		alert("输入错误");
 		return false
 	}
+	if(lottery_level==1)
+	{
+	    if(Number(val) > max_winners - count_first_winner_selected)
+        {
+            alert("输入错误，剩余名额：" + (max_winners - count_first_winner_selected).toString());
+            return false
+        }
+	}
+	if(lottery_level==2)
+	{
+	    if(Number(val) > max_winners - count_second_winner_selected)
+        {
+            alert("输入错误，剩余名额：" + (max_winners - count_second_winner_selected).toString());
+            return false
+        }
+	}
+	if(lottery_level==3)
+	{
+	    if(Number(val) > max_winners - count_third_winner_selected)
+        {
+            alert("输入错误，剩余名额：" + (max_winners - count_third_winner_selected).toString());
+            return false
+        }
+	}
+	if(lottery_level==0)
+	{
+	    if(Number(val) > max_winners - count_lucky_winner_selected)
+        {
+            alert("输入错误，剩余名额：" + (max_winners - count_lucky_winner_selected).toString());
+            return false
+        }
+	}
+
 	for (i=0;i<winners.length;i++){
 			temp = phone_new.indexOf(winners[i]);
 			if (temp > -1)
@@ -131,6 +164,19 @@ function zd() {
 						Lotterynumber = Count;
 						trigger = true;
 						$("#start").attr("onclick",'start($("#count_set").val())');
+
+						if (lottery_level==0){
+						    count_lucky_winner_selected = count_lucky_winner_selected + Number(Count);
+						}
+						if (lottery_level==1){
+						    count_first_winner_selected = count_first_winner_selected + Number(Count);
+						}
+						if (lottery_level==2){
+						    count_second_winner_selected = count_second_winner_selected + Number(Count);
+						}
+						if (lottery_level==3){
+						    count_third_winner_selected = count_third_winner_selected + Number(Count);
+						}
 					};
 
 					$('.luck-user-list').prepend("<li><div class='portrait' style='background-image:url("+xinm_new[num]+")'></div><div class='luckuserName'>"+phone_new[num]+"</div></li>");

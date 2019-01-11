@@ -34,10 +34,10 @@
         </div>
         <div class="luck-content ce-pack-end">
             <select name="levelselect" id="levelselect" class="levellottery">
-                <option class="levellotteryoption">一等奖</option>
-                <option class="levellotteryoption">幸运奖</option>
-                <option class="levellotteryoption">二等奖</option>
-                <option selected class="levellotteryoption">三等奖</option>
+                <option class="levellotteryoption" id="first">一等奖</option>
+                <option class="levellotteryoption" id="lucky">幸运奖</option>
+                <option class="levellotteryoption" id="second">二等奖</option>
+                <option selected class="levellotteryoption" id="third">三等奖</option>
             </select>
             <div id="luckuser" class="slotMachine">
                 <div class="slot">
@@ -66,8 +66,50 @@
         var phone = new Array();
         var winners = new Array();
         var lotterylevel = $("#levelselect").val();
+        const first_lottery=1;
+        const second_lottery=5;
+        const third_lottery=8;
+        const lucky_lottery=15;
+        var max_winners;
+        var count_first_winner_selected=0;
+        var count_second_winner_selected=0;
+        var count_third_winner_selected=0;
+        var count_lucky_winner_selected=0;
+        var lottery_level;
+        if(lotterylevel==$("#first").val()){
+            max_winners = first_lottery;
+            lottery_level=1;
+        }
+        if(lotterylevel==$("#second").val()){
+            max_winners = second_lottery;
+            lottery_level=2;
+        }
+        if(lotterylevel==$("#third").val()){
+            max_winners = third_lottery;
+            lottery_level=3;
+        }
+        if(lotterylevel==$("#lucky").val()){
+            max_winners = lucky_lottery;
+            lottery_level=0;
+        }
         $("#levelselect").change(function(){
         	lotterylevel=$("#levelselect").val();
+        	if(lotterylevel==$("#first").val()){
+        	    max_winners = first_lottery - count_first_winner_selected;
+        	    lottery_level=1;
+        	}
+        	if(lotterylevel==$("#second").val()){
+        	    max_winners = second_lottery - count_second_winner_selected;
+        	    lottery_level=2;
+        	}
+        	if(lotterylevel==$("#third").val()){
+        	    max_winners = third_lottery - count_third_winner_selected;
+        	    lottery_level=3;
+        	}
+        	if(lotterylevel==$("#lucky").val()){
+        	    max_winners = lucky_lottery - count_lucky_winner_selected;
+        	    lottery_level=0;
+        	}
         });
         $.getJSON("static/employee.json",function(data){
             var nametxt = $('.slot');
