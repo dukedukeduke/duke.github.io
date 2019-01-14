@@ -4,7 +4,7 @@ html,body{padding: 0; margin: 0; font-family: 14px; font-family: "微软雅黑";
 
 .ce-pack-end{display: -webkit-box; -webkit-box-orient: vertical; -webkit-box-pack:center; position: absolute; top:0; left: 0;}
 
-.luck-back{background-image: url(../img/back1.jpg); background-size: cover; background-position: top center; position: absolute; height: 100%; width: 100%; color: #fff;}
+.luck-back{background-image: url(../img/back2.jpg); background-size: cover; background-position: top center; position: absolute; height: 100%; width: 100%; color: #fff;}
 
 .luck-content{position: absolute; top: 20%; bottom:20%; left:20%; right:20%; background: rgba(0,0,0,.6); padding: 20px; border-radius: 5px; padding-right:260px;}
 .lucky_list_show{position: absolute; top: 10%;right:4%; padding: 20px; border-radius: 5px;}
